@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete Security Headers Guide (Hinglish)</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.7; margin: 40px; background: #0f172a; color: #e2e8f0; }
+        h1 { color: #38bdf8; }
+        h2 { margin-top: 40px; color: #22d3ee; }
+        .card { background: #1e293b; padding: 20px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+        .section-title { font-weight: bold; margin-top: 12px; color: #facc15; }
+        code { background: #334155; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<h1>Complete Security Headers Guide (Hinglish Version)</h1>
+<p>Ye document har security header ko simple Hinglish me explain karta hai — ye kya karta hai, developers kyu use karte hain, agar missing ho to kya risk hota hai, aur bug hunting mindset se iska kya matlab hai.</p>
+
+    <div class="card">
+        <h2>Content-Security-Policy</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Browser ko batata hai kaunse scripts, styles aur resources load hone allowed hain. Mainly XSS attacks rokne ke liye.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Strict-Transport-Security</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Browser ko force karta hai ki sirf HTTPS use kare. HTTP downgrade attack se bachata hai.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>X-Frame-Options</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Site ko iframe me load hone se control karta hai. Clickjacking attack rokta hai.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>X-Content-Type-Options</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Browser ko bolta hai file type guess mat karo (no MIME sniffing).</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Referrer-Policy</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Control karta hai ki dusri site ko kitni URL/referrer info bhejni hai.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Permissions-Policy</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Camera, mic, geolocation jaise browser features ko restrict karta hai.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Access-Control-Allow-Origin</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Define karta hai kaunse domains cross-origin request kar sakte hain (CORS).</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Access-Control-Allow-Credentials</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Batata hai ki cookies/auth credentials cross-origin request me allowed hain ya nahi.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Access-Control-Allow-Methods</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>CORS me kaunse HTTP methods allowed hain.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Access-Control-Allow-Headers</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>CORS request me kaunse custom headers allowed hain.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>X-XSS-Protection</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Purana browser XSS filter header (ab deprecated hai).</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Public-Key-Pins</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Certificate pinning ke liye use hota tha (ab deprecated).</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Expect-CT</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Certificate Transparency enforce karta hai.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Cross-Origin-Opener-Policy</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Cross-origin attacks se isolate karta hai (Spectre type risks).</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Cross-Origin-Embedder-Policy</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Cross-origin resources embed karne ka control deta hai.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Cross-Origin-Resource-Policy</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Define karta hai kaun resource load kar sakta hai.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Cache-Control</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Browser caching control karta hai. Sensitive pages me no-store use hota hai.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Pragma</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Legacy cache control header.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Expires</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Content kab expire hoga ye define karta hai.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developers in headers ko use karte hain taaki browser ko security instructions mile aur attack surface kam ho. Ye defense-in-depth strategy ka part hote hain.</p>
+
+        <div class="section-title">Agar Missing Ho To:</div>
+        <p>Misconfiguration ya missing header ki wajah se XSS, clickjacking, data leakage, session hijacking ya information disclosure ka risk badh sakta hai — depend karta hai application context pe.</p>
+
+        <div class="section-title">Bug Hunting Mindset:</div>
+        <p>Bug hunters check karte hain ki header properly configured hai ya nahi. Kabhi-kabhi misconfigured CORS, weak cookie flags, ya missing CSP real-world impact create kar sakte hain.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Set-Cookie</h2>
+
+        <div class="section-title">Ye Kya Karta Hai:</div>
+        <p>Cookies set karta hai. Secure, HttpOnly, SameSite flags important hote hain.</p>
+
+        <div class="section-title">Developers Kyu Use Karte Hain:</div>
+        <p>Developer
