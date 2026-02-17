@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete Security Headers Guide</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; background: #f4f6f8; }
+        h1 { color: #111; }
+        h2 { margin-top: 40px; color: #1a73e8; }
+        .card { background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .section-title { font-weight: bold; margin-top: 10px; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<h1>Complete Security Headers Guide</h1>
+<p>This document explains what each security header does, why developers use it, risks if missing, and high-level attacker impact scenarios (defensive learning purpose).</p>
+
+
+    <div class="card">
+        <h2>Content-Security-Policy</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Controls which scripts, styles, and resources are allowed to load. Prevents XSS attacks. If missing, injected scripts may execute. Developers use it to define trusted sources.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Strict-Transport-Security</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Forces HTTPS connections. Prevents downgrade and interception attacks. If missing, users may be exposed to insecure HTTP sessions.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>X-Frame-Options</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Prevents the site from being embedded in iframes. Protects against clickjacking. Missing header may allow UI redress attacks.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>X-Content-Type-Options</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Prevents MIME sniffing. Ensures browser respects declared content type. Missing header may allow content type confusion.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Referrer-Policy</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Controls how much referrer data is shared. Protects sensitive URL information. Without it, internal paths may leak.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Permissions-Policy</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Restricts browser features like camera and microphone. Without it, embedded content may access sensitive APIs.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Access-Control-Allow-Origin</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Defines which origins can access resources via CORS. Misconfiguration may allow unauthorized cross-origin data access.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Access-Control-Allow-Credentials</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Controls whether credentials can be sent in CORS requests. Improper use may expose authenticated data.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Access-Control-Allow-Methods</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Specifies allowed HTTP methods for cross-origin requests. Poor config may expand attack surface.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Access-Control-Allow-Headers</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Defines allowed custom headers in CORS requests. Overly permissive settings may increase risk.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>X-XSS-Protection</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Legacy XSS filter header. Deprecated in modern browsers. Was used to enable built-in XSS filtering.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Public-Key-Pins</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Deprecated header that pinned certificates. Misconfiguration could lock users out of a site.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Expect-CT</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Ensures Certificate Transparency compliance. Missing it reduces visibility of rogue certificates.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Cross-Origin-Opener-Policy</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Isolates browsing context to prevent cross-origin attacks like Spectre-based data leaks.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Cross-Origin-Embedder-Policy</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Controls cross-origin resource embedding. Required for secure contexts using advanced APIs.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Cross-Origin-Resource-Policy</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Restricts who can load resources from the site. Protects against unauthorized embedding.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Cache-Control</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Controls caching behavior. Sensitive pages should use no-store. Missing restrictions may expose private data in cache.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Pragma</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Legacy cache control header. Helps prevent caching in older systems.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Expires</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Defines expiration date of content. Improper configuration may lead to stale or exposed sensitive data.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduce attack surface, enforce browser security rules, and protect users from common web threats.</p>
+
+        <div class="section-title">If Missing:</div>
+        <p>Missing or misconfigured implementation may increase exposure to data leakage, XSS, clickjacking, session hijacking, or information disclosure depending on context.</p>
+
+        <div class="section-title">Attacker Impact (High-Level):</div>
+        <p>Attackers may attempt to exploit weak configurations through client-side manipulation, misconfiguration abuse, or session exploitation. Proper server-side validation and defense-in-depth reduce these risks.</p>
+    </div>
+    
+    <div class="card">
+        <h2>Set-Cookie</h2>
+        <div class="section-title">What It Does:</div>
+        <p>Sets cookies. Secure flags (HttpOnly, Secure, SameSite) protect sessions. Missing flags may enable session theft.</p>
+
+        <div class="section-title">Why Developers Use It:</div>
+        <p>Developers use this header to reduc
